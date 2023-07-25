@@ -1,10 +1,10 @@
 package com.example.demo.repository;
 
 import com.example.demo.models.User;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepo {
-
-    static Iterable<User> findAll() {
-    }
+@Repository
+public interface UserRepo extends CrudRepository<User, Long>{
 }
 //😁
