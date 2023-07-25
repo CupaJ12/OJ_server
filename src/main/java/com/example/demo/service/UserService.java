@@ -6,13 +6,20 @@ import com.example.demo.repository.UserRepo;
 @Service
 public class UserService {
 
-    private UserController userController;
+    private UserRepo userRepo;
 
-    public UserService(UserController UserController){
-        this.userController = UserController;
+    public UserService(UserRepo userRepo){
+        this.userRepo = userRepo;
     }
     public Iterable<User> getAllUsers() {
         return UserRepo.findAll();
     }
 
+    public Boolean register(User newUser) {
+       User newRegisteredUser = new User(newUser.id);
+if(newUser != null){
+    if(newUser.name)
+}
+        this.userRepo.save(newUser);
+    }
 }
